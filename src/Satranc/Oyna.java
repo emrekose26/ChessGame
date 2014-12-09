@@ -18,6 +18,7 @@ public class Oyna {
 			{
 
 		    tahta.yazdir();
+		    System.out.println();
 			System.out.println("Beyaz taþlý oyuncumuz sýra sizin,oynatmak istediðiniz taþýn X koordinatý?");
 	    	koordinat.setbasX(new Scanner(System.in).nextByte());
 	    	System.out.println("Y koordinatý lütfen ?"); koordinat.setbasY(new Scanner(System.in).nextByte());
@@ -42,6 +43,8 @@ public class Oyna {
 	    	{
 
 				tahta.yazdir();
+				System.out.println();
+				
 	    		System.out.println("Siyah taþlý oyuncumuz sýra sizin,oynatmak istediðiniz taþýn X koordinatý?");
 		    	koordinat.setbasX(new Scanner(System.in).nextByte());
 		    	System.out.println("Y koordinatý lütfen ?"); koordinat.setbasY(new Scanner(System.in).nextByte());
@@ -55,7 +58,7 @@ public class Oyna {
 		    	  {
 		    		hata2=false;   beyaz.koordinatiAl(koordinat);     beyaz.tahtayiAl(tahta);       beyaz.tahtayaGonder();   tahta.yazdir();
 		    	  }
-	 
+	    		System.out.println();
 	    		
 	    	}
 	    	

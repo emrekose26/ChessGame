@@ -10,7 +10,7 @@ public class Tahta {
 		
 		//for WhitePlayer
 
-		tahta[7][0]='k'; tahta[7][1]='a'; tahta[7][2]='f'; tahta[7][3]='v'; tahta[7][4]='v'; tahta[7][5]='f'; tahta[7][6]='a'; tahta[7][7]='k';
+		tahta[7][0]='k'; tahta[7][1]='a'; tahta[7][2]='f'; tahta[7][3]='v'; tahta[7][4]='ş'; tahta[7][5]='f'; tahta[7][6]='a'; tahta[7][7]='k';
 		tahta[6][0]='p'; tahta[6][1]='p'; tahta[6][2]='p'; tahta[6][3]='p'; tahta[6][4]='p'; tahta[6][5]='p'; tahta[6][6]='p'; tahta[6][7]='p';
 		
 	}

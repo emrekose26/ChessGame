@@ -13,17 +13,19 @@ public class Piyon extends Tas {
 		//1.oyuncu için
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'p'){
 			//tek kare oynatma
-			if(xFark == 0 && yFark == 1)
+			if(xFark == 0 && yFark == 1){
 				Degistir = 1;
-		
+				
+			}
 		
 		//yeme islemi
 		else if((xFark == 1 && yFark == 1) || (xFark == -1 && yFark == 1))
 		{
-			if(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] == ' ')
+			if(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] != ' ' )
 			{
 				Degistir = 1;
-				//tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] = 'p';
+				
+		
 			}
 		}
 		
@@ -31,6 +33,7 @@ public class Piyon extends Tas {
 		else if(koordinat.getbasY() == 6 && (xFark == 0 && yFark == 2))
 		{
 			Degistir = 1;
+			
 		}	
 		
 		}	
@@ -38,22 +41,24 @@ public class Piyon extends Tas {
 		//2.oyuncu için
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'P'){
 			//tek kare oynatma
-			if(xFark == 0 && yFark == -1)
+			if(xFark == 0 && yFark == -1){
 				Degistir = 2;
-		
+				
+			}
 		//yeme islemi
 		else if((xFark == -1 && yFark == 1) && (xFark == 1 && yFark == 1))
 		{
 			if(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] == ' ')
 			{
 				Degistir = 2;
-				tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] = 'P';
+				
 			}
 		}
 		//2 kare oynatma
 		else if(koordinat.getbasY() == 1 && (xFark == 0 && yFark == -2))
 		{
 			Degistir = 2;
+			
 		}	
 		
 		}
