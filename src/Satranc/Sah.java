@@ -6,6 +6,7 @@ public class Sah extends Tas{
 	public void hamleYap() {
 		// TODO Auto-generated method stub
 		//Þah
+		
 	}
 
 }
