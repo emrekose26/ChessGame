@@ -1,6 +1,7 @@
 package Satranc;
 
 public class Oyuncu {
+	//public static byte oyuncuSira = 1;
 	Koordinat koordinat = new Koordinat();
 	Tahta tahta = new Tahta();
 	
@@ -18,7 +19,8 @@ public class Oyuncu {
 		
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='P' || tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='p')
 		{
-			//tahta.yerlestir(new Piyon(),koord,kendi_rengi,yedigi_renk,tahta);
+			tahta.yerlestir(new Piyon(), koordinat, tahta);
+			
 		}
 		else if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='K'||tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='k')
 		{
@@ -43,6 +45,7 @@ public class Oyuncu {
 		else 
 		{
 			System.out.println("Boþ karenin koordinatlarýný girdiniz!!");
+			
 		}
 		
 	}

@@ -32,5 +32,9 @@ public class Tahta {
 	}//yazdýr son
 	
 	
+	public void yerlestir(Tas tas,Koordinat koordinat,Tahta tahta){
+		tas.hamleYap(koordinat, tahta);
+	}
+	
 	
 }
