@@ -25,7 +25,6 @@ public class Piyon extends Tas {
 			{
 				Degistir = 1;
 				
-		
 			}
 		}
 		
@@ -48,7 +47,7 @@ public class Piyon extends Tas {
 		//yeme islemi
 		else if((xFark == -1 && yFark == 1) && (xFark == 1 && yFark == 1))
 		{
-			if(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] == ' ')
+			if(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] != ' ')
 			{
 				Degistir = 2;
 				
