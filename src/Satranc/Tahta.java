@@ -16,19 +16,21 @@ public class Tahta {
 	}
 	
 	public void yazdir(){
-		for(int k=0; k<8; k++)
-			System.out.print("\t"+k);
 		
-			System.out.println();
+			for(int k=0; k<8; k++)
+				System.out.print("\t"+k);
+			
+				System.out.println();
+				
 				for(int i=0; i<8; i++)
 					{
 						System.out.print(i + "\t");
 						for(int j=0; j<8; j++)
-					{
-							System.out.print(tahta[i][j]+"\t");
-			}
-						System.out.println();
-		}
+							{
+								System.out.print(tahta[i][j]+"\t");
+							}		
+								System.out.println();
+					}
 	}//yazdýr son
 	
 	

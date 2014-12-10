@@ -1,7 +1,7 @@
 package Satranc;
 
 public class Oyuncu {
-	//public static byte oyuncuSira = 1;
+	
 	Koordinat koordinat = new Koordinat();
 	Tahta tahta = new Tahta();
 	
