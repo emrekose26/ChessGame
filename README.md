@@ -5,5 +5,5 @@ Nesne Yönelimli Programlama Dersi Proje Ödevi için geliştirilmiş,konsolda �
 Projede Yer Alanlar
 ---------
 
-<a href="https://github.com/fatmakoc">- Fatma Koç</a>
+<a href="https://github.com/fatmakoc">- Fatma Koç</a></br>
 <a href="https://github.com/emrekose26">- Emre Köse</a>
