@@ -8,7 +8,7 @@ public class Sah extends Tas{
 		int xFark =(koordinat.getbasX() - koordinat.getsonX());
 		int yFark = (koordinat.getbasY() - koordinat.getsonY());
 		boolean yanlis_koordinat=false;
-		byte Degistir = 0;
+		int Degistir = 0;
 		
 		//1.oyuncu için
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'þ')
@@ -99,6 +99,8 @@ public class Sah extends Tas{
 			}
 			
 		}
+		
+		if(Degistir==0)  yanlis_koordinat=true;
 		
 		if(Degistir == 1)
 		{
