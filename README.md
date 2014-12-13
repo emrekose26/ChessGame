@@ -6,4 +6,4 @@ Projede Yer Alanlar
 ---------
 
 <a href="https://github.com/fatmakoc">- Fatma Koç</a>
-- Emre Köse
+<a href="https://github.com/emrekose26">- Emre Köse</a>
