@@ -34,8 +34,10 @@ public class Tahta {
 	}//yazdýr son
 	
 	
-	public void yerlestir(Tas tas,Koordinat koordinat,Tahta tahta){
-		tas.hamleYap(koordinat, tahta);
+	public boolean yerlestir(Tas tas, Koordinat koordinat, Tahta tahta)
+	{
+		boolean yanlis_koordinat=tas.hamleYap(koordinat,tahta);
+		return yanlis_koordinat;
 	}
 	
 	
