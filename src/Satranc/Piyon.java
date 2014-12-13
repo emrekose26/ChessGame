@@ -9,7 +9,7 @@ public class Piyon extends Tas {
 		int yFark = (koordinat.getbasY() - koordinat.getsonY());
 		int a,b;
 		boolean yanlis_koordinat=false;
-		byte Degistir = 0;
+		int Degistir = 0;
 		
 		//1.oyuncu için
 		
