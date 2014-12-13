@@ -9,12 +9,11 @@ public class Kale extends Tas{
 		int b=koordinat.getbasX();
 		boolean girdi=false; 
 		boolean yanlis_koordinat=false;
-		int c=koordinat.getsonY();
-		int d=koordinat.getsonX();
-		boolean tehdit=false;
 		
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='k') //beyazýn kale taþý
 		{
+		
+			
 		
 		//dikey yukarý
 		
@@ -101,82 +100,40 @@ public class Kale extends Tas{
 				       }
 				}
 				
+				
+				//Beyaz için rok(1.durum)
+				if(((koordinat.getbasY() == 7 && koordinat.getbasX() == 7) && (koordinat.getsonY() == 7 && koordinat.getsonX() == 5)) && (tahta.tahta[7][7] == 'k') && 
+						(tahta.tahta[7][5] == ' ' && tahta.tahta[7][6] == ' ') && tahta.tahta[7][4] == 'þ')
+				{
+					tahta.tahta[7][6] = 'þ';
+					tahta.tahta[7][5] = 'k';
+					tahta.tahta[7][4] = ' ';
+					tahta.tahta[7][7] = ' '; 
+					System.out.println("Beyaz oyuncu Rok yaptý");
+				}
+				//Beyaz için rok (2.durum)
+				if(((koordinat.getbasY() == 7 && koordinat.getbasX() == 0) && (koordinat.getsonY() == 7 && koordinat.getsonX() == 3)) && (tahta.tahta[7][0] == 'k') && 
+						(tahta.tahta[7][1] == ' ' && tahta.tahta[7][2] == ' ' && tahta.tahta[7][3] == ' ') && tahta.tahta[7][4] == 'þ')
+				{
+					tahta.tahta[7][2] = 'þ';
+					tahta.tahta[7][3] = 'k';
+					tahta.tahta[7][4] = ' ';
+					tahta.tahta[7][0] = ' '; 
+					System.out.println("Beyaz oyuncu Rok yaptý");
+				}
+				
+				
 				System.out.println();	
 				
 		}
 		
-		if(girdi==true && Character.isLowerCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
-		{
-			tehdit=false;
-			c=koordinat.getsonY();
-			d=koordinat.getsonX();
-			
-			while(c-1>0 && tehdit==false && (tahta.tahta[c-1][d]==' ' || Character.isLowerCase(tahta.tahta[c-1][d])!=true))
-            {
-
-                if(tahta.tahta[c-1][d]=='Þ')
-                     {
-                       System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
-                       tehdit=true;
-                        break;
-                     }
-  	           c=c-1;
-            }
-			
-			c=koordinat.getsonY();
-			d=koordinat.getsonX();
-			
-			 while(c+1<7 && tehdit==false && (tahta.tahta[c+1][d]==' ' || Character.isLowerCase(tahta.tahta[c+1][d])!=true))
-             {
-	   
-                	if(tahta.tahta[c+1][d]=='Þ')
-	                    {
-		                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
-		                   tehdit=true;
-		                   break;
-	                    }
-	
-  	         c=c+1;
-             }
-			
-			 c=koordinat.getsonY();
-		     d=koordinat.getsonX();
-				
-				 while(d-1>0 && tehdit==false && (tahta.tahta[c][d-1]==' ' || Character.isLowerCase(tahta.tahta[c][d-1])!=true) )
-	             {
-		   
-	                	if(tahta.tahta[c][d-1]=='Þ')
-		                    {
-			                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
-			                   tehdit=true;
-			                   break;
-		                    }
-		
-	  	         d-=1;
-	             }
-				 
-			  c=koordinat.getsonY();
-			  d=koordinat.getsonX();
-					
-					 while(d+1<7  && tehdit==false && (tahta.tahta[c][d+1]==' ' || Character.isLowerCase(tahta.tahta[c][d+1])!=true))
-		             {
-			   
-		                	if(tahta.tahta[c][d+1]=='Þ')
-			                    {
-				                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
-				                   tehdit=true;
-				                   break;
-			                    }
-			
-		  	        d+=1;
-		             } 	
-		}
-		   
+		         
 	        
 	        //Siyah Kale içinnnnn.....
 		
 		 if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='K') //siyah kale taþý
 			{
+			
 			
 			//dikey yukarý
 			
@@ -266,80 +223,36 @@ public class Kale extends Tas{
 					
 				
 			}
-		 	tehdit=false;
-		 
-		 	if(girdi==true && Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
-			{
-			    
-				c=koordinat.getsonY();
-				d=koordinat.getsonX();
-				
-				while(c-1>0 && tehdit==false && (tahta.tahta[c-1][d]==' ' || Character.isUpperCase(tahta.tahta[c-1][d])!=true) )
-	            {
-
-	                if(tahta.tahta[c-1][d]=='þ')
-	                     {
-	                       System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
-	                       tehdit=true;
-	                        break;
-	                     }
-	  	           c=c-1;
-	            }
-				
-				c=koordinat.getsonY();
-				d=koordinat.getsonX();
-				
-				 while(c+1<7 && tehdit==false && (tahta.tahta[c+1][d]==' ' || Character.isUpperCase(tahta.tahta[c+1][d])!=true))
-	             {
 		   
-	                	if(tahta.tahta[c+1][d]=='þ')
-		                    {
-			                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
-			                   tehdit=true;
-			                   break;
-		                    }
-		
-	  	         c=c+1;
-	             }
-				
-				 c=koordinat.getsonY();
-			     d=koordinat.getsonX();
-				
-					 while(d-1>0 && tehdit==false && (tahta.tahta[c][d-1]==' ' || Character.isUpperCase(tahta.tahta[c][d-1])!=true))
-		             {
-			   
-		                	if(tahta.tahta[c][d-1]=='þ')
-			                    {
-				                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
-				                   tehdit=true;
-				                   break;
-			                    }
-			
-		  	         d-=1;
-		             }
-					 
-				  c=koordinat.getsonY();
-				  d=koordinat.getsonX();
-						
-						 while(d+1<7 && tehdit==false && (tahta.tahta[c][d+1]==' ' || Character.isUpperCase(tahta.tahta[c][d+1])!=true))
-			             {
-				   
-			                	if(tahta.tahta[c][d+1]=='þ')
-				                    {
-					                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
-					                   tehdit=true;
-					                   break;
-				                    }
-				
-			  	        d+=1;
-			             } 	
-			} 
- 
+		 
+		 			// Siyah için rok(1.durum)
+					if(((koordinat.getbasY() == 0 && koordinat.getbasX() == 7) && (koordinat.getsonY() == 0 && koordinat.getsonX() == 5)) && (tahta.tahta[0][7] == 'k') && 
+							(tahta.tahta[0][5] == ' ' && tahta.tahta[0][6] == ' ') && tahta.tahta[0][4] == 'þ')
+					{
+						tahta.tahta[0][6] = 'þ';
+						tahta.tahta[0][5] = 'k';
+						tahta.tahta[0][4] = ' ';
+						tahta.tahta[0][7] = ' '; 
+						System.out.println("Siyah oyuncu Rok yaptý");
+					}
+					
+					//Siyah oyuncu için rok(2.durum)
+					if(((koordinat.getbasY() == 0 && koordinat.getbasX() == 0) && (koordinat.getsonY() == 0 && koordinat.getsonX() == 3)) && (tahta.tahta[0][0] == 'k') && 
+							(tahta.tahta[0][1] == ' ' && tahta.tahta[0][2] == ' ' && tahta.tahta[0][3] == ' ') && tahta.tahta[0][4] == 'þ')
+					{
+						tahta.tahta[0][2] = 'þ';
+						tahta.tahta[0][3] = 'k';
+						tahta.tahta[0][4] = ' ';
+						tahta.tahta[0][0] = ' '; 
+						System.out.println("Siyah oyuncu Rok yaptý");
+					}
+		 
+		 
+		 
 		    if(girdi==false) yanlis_koordinat=true;
 		 
 			System.out.println();
 			return yanlis_koordinat;
-		  
 		
 	}
 
