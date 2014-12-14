@@ -290,7 +290,7 @@ public class Vezir extends Tas {
 		  	        d+=1;
 		             } 	
 					 
-					 c=koordinat.getsonY();
+					 	c=koordinat.getsonY();
 						d=koordinat.getsonX();
 						
 						//sol yukarý çapraz
@@ -567,7 +567,7 @@ public class Vezir extends Tas {
 				 }  
 			
 		}
-		tehdit=false;
+		
 		
 		if(girdi==true && Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
 		{
@@ -634,7 +634,7 @@ public class Vezir extends Tas {
 		  	        d+=1;
 		             } 	
 					 
-					 c=koordinat.getsonY();
+					 	c=koordinat.getsonY();
 						d=koordinat.getsonX();
 						
 						//sol yukarý çapraz
