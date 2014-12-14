@@ -269,7 +269,7 @@ public class Fil extends Tas{
 				
 		           	}
 			}
-			tehdit=false;
+			
 			
 			if(girdi==true && Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()]))
 			{
