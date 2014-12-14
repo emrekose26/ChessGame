@@ -9,6 +9,7 @@ public class Sah extends Tas{
 		int yFark = (koordinat.getbasY() - koordinat.getsonY());
 		boolean yanlis_koordinat=false;
 		int Degistir = 0;
+		int Degistir2 = 0;
 		
 		//1.oyuncu için
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'þ')
@@ -36,14 +37,14 @@ public class Sah extends Tas{
 			if(((koordinat.getbasY() == 7 && koordinat.getbasX() == 4) && (koordinat.getsonY() == 7 && koordinat.getsonX() == 6)) && (tahta.tahta[7][7] == 'k') && 
 					(tahta.tahta[7][5] == ' ' && tahta.tahta[7][6] == ' ') && tahta.tahta[7][4] == 'þ')
 			{
-				Degistir = 3;
+				Degistir2 = 3;
 				
 			}
 			//Beyaz için rok (2.durum)
 			else if(((koordinat.getbasY() == 7 && koordinat.getbasX() == 4) && (koordinat.getsonY() == 7 && koordinat.getsonX() == 2)) && (tahta.tahta[7][0] == 'k') && 
 					(tahta.tahta[7][1] == ' ' && tahta.tahta[7][2] == ' ' && tahta.tahta[7][3] == ' ') && tahta.tahta[7][4] == 'þ')
 			{
-				Degistir = 4;
+				Degistir2 = 4;
 			}
 			
 		}
@@ -70,7 +71,7 @@ public class Sah extends Tas{
 			if(((koordinat.getbasY() == 0 && koordinat.getbasX() == 4) && (koordinat.getsonY() == 0 && koordinat.getsonX() == 6)) && (tahta.tahta[0][7] == 'K') && 
 					(tahta.tahta[0][5] == ' ' && tahta.tahta[0][6] == ' ') && tahta.tahta[0][4] == 'Þ')
 			{
-				Degistir = 5;
+				Degistir2 = 5;
 				
 			}
 			
@@ -78,7 +79,7 @@ public class Sah extends Tas{
 			else if(((koordinat.getbasY() == 0 && koordinat.getbasX() == 4) && (koordinat.getsonY() == 0 && koordinat.getsonX() == 2)) && (tahta.tahta[0][0] == 'K') && 
 					(tahta.tahta[0][1] == ' ' && tahta.tahta[0][2] == ' ' && tahta.tahta[0][3] == ' ') && tahta.tahta[0][4] == 'Þ')
 			{
-				Degistir = 6;
+				Degistir2 = 6;
 				
 			}
 			
@@ -88,6 +89,7 @@ public class Sah extends Tas{
 		
 		if(Degistir == 1)
 		{
+			
 			tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=' ';
 			tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] = 'þ';
 		}
@@ -99,7 +101,7 @@ public class Sah extends Tas{
 		}
 		
 		//Beyaz için rok(Durum 1)
-		else if(Degistir == 3)
+		else if(Degistir2 == 3)
 		{
 			tahta.tahta[7][6] = 'þ';
 			tahta.tahta[7][5] = 'k';
@@ -109,7 +111,7 @@ public class Sah extends Tas{
 		}
 		
 		//Beyaz için rok(Durum 2)
-		else if(Degistir == 4)
+		else if(Degistir2 == 4)
 		{
 			tahta.tahta[7][2] = 'þ';
 			tahta.tahta[7][3] = 'k';
@@ -118,7 +120,7 @@ public class Sah extends Tas{
 			System.out.println("Beyaz oyuncu Rok yaptý");
 		}
 		//Siyah için rok(Durum 1)
-		else if(Degistir == 5)
+		else if(Degistir2 == 5)
 		{
 			tahta.tahta[0][6] = 'Þ';
 			tahta.tahta[0][5] = 'K';
@@ -128,7 +130,7 @@ public class Sah extends Tas{
 		}
 		
 		//Siyah için rok(Durum 2) 
-		else if(Degistir == 6)
+		else if(Degistir2 == 6)
 		{
 			tahta.tahta[0][2] = 'Þ';
 			tahta.tahta[0][3] = 'K';
