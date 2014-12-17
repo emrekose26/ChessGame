@@ -113,8 +113,9 @@ public class Fil extends Tas{
 			d=koordinat.getsonX();
 			
 			//sol yukarý çapraz
-			while(c-1>0 && d-1>0 && tehdit==false && (tahta.tahta[c-1][d-1]==' ' || Character.isLowerCase(tahta.tahta[a-1][b-1])!=true ))
+			while(c-1>0 && d-1>0 && tehdit==false && (tahta.tahta[c-1][d-1]==' ' || Character.isLowerCase(tahta.tahta[c-1][d-1])!=true ))
 	        {
+				
 		        if(tahta.tahta[c-1][d-1]=='Þ')
 		            {
 			             System.out.println("Beyaz taþlý oyuncu þahýnýzý tehdit ediyor");
@@ -122,7 +123,7 @@ public class Fil extends Tas{
     		              break;
 		            }
 		
-	          	c-=1;  d-=1;
+		         c-=1;  d-=1;
 		
             }
 			//sað yukarý çapraz
@@ -131,7 +132,7 @@ public class Fil extends Tas{
 			
 			 while(c-1>0 && d+1<7 && tehdit==false && (tahta.tahta[c-1][d+1]==' ' || Character.isLowerCase(tahta.tahta[c-1][d+1])!=true))
              {
-	   
+				 
                 	if(tahta.tahta[c-1][d+1]=='Þ')
 	                    {
 		                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
@@ -139,7 +140,7 @@ public class Fil extends Tas{
 		                   break;
 	                    }
 	
-  	         c-=1; d+=1;
+                	 c-=1; d+=1;
              }
 			    //sol aþaðý çapraz
 			    c=koordinat.getsonY();
@@ -147,15 +148,14 @@ public class Fil extends Tas{
 				
 				 while(c+1<7 && d-1>0 && tehdit==false && (tahta.tahta[c+1][d-1]==' ' || Character.isLowerCase(tahta.tahta[c+1][d-1])!=true))
 	             {
-		   
-	                	if(tahta.tahta[c-1][d+1]=='Þ')
+					 
+	                	if(tahta.tahta[c+1][d-1]=='Þ')
 		                    {
 			                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
 			                   tehdit=true;
 			                   break;
 		                    }
-		
-	  	         c+=1; d-=1;
+	                	  c+=1; d-=1;
 	             }
 				 
 				 //sað aþaðý çapraz
@@ -165,7 +165,7 @@ public class Fil extends Tas{
 					
 				 while(c+1<7 && d+1<7 && tehdit==false && (tahta.tahta[c+1][d+1]==' ' || Character.isLowerCase(tahta.tahta[c+1][d+1])!=true))
 		             {
-			   
+					 	
 		                	if(tahta.tahta[c+1][d+1]=='Þ')
 			                    {
 				                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
@@ -173,7 +173,7 @@ public class Fil extends Tas{
 				                   break;
 			                    }
 			
-		  	         c+=1; d+=1;
+		                	 c+=1; d+=1;
 		             }	 	
 			
 		}
